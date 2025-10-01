@@ -40,4 +40,30 @@ const myFunction=function(){
     
 }
 
-console.log(typeof bigNumber);
+//console.log(typeof bigNumber);
+
+
+//*****************************************************
+
+// Stack(Primitive), Heap(Non-Primitive)
+
+
+let myName = 'Iron Man';
+let anotherName = myName;
+anotherName = 'thor';
+
+console.log(myName);
+console.log(anotherName);
+
+let userOne ={
+    name:'hulk',
+    email:'hulk@abc.com'
+}
+
+let userTwo= userOne;
+
+userTwo.name='antman';
+
+console.log(userOne);
+console.log(userTwo);
+
