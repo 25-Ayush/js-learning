@@ -58,3 +58,18 @@ else{
 
 
 ```
+
+## Project 3
+
+```javascript
+const clock =document.querySelector('#clock')
+
+let now = new Date()
+let time = now.toLocaleTimeString()
+
+setInterval(function(){
+let now = new Date()
+clock.innerHTML = now.toLocaleTimeString()
+},1000)
+
+```
