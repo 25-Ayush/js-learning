@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Events</title>
+</head>
+<body>
+     <ul id="images">
+        <li><img width="200px" id="squirrel" src="https://www.pexels.com/photo/brown-squirrel-47547" alt="squirrel"></li>
+        <li><img width="200px" id="giraffe" src="https://www.pexels.com/photo/three-giraffe-under-gray-sky-34098" alt="giraffe"></li>
+        <li><img width="200px" id="zebras" src="https://www.pexels.com/photo/zebras-on-zebra-247376" alt="zebras"></li>
+        <li><a href="https://www.google.com" id="google">Google</a></li>
+     </ul>
+</body>
+<script>
+    // document.getElementById('squirrel').onclick = function(){
+    //     alert('Squirrel')
+    // }
+
+    // attackEvent()
+    // jQuery - on
+
+     //type , timestamp , defaultPrevented
+    //target , toElement , srcElement , currentTarget
+    // clientX , clientY , screenX , screenY
+    // altKey , ctrlKey , shiftKey , keyCode
+
+    // Bubbling mode
+
+    // document.getElementById('images').addEventListener('click',function(e){
+    //     console.log('image clicked');
+        
+    // },false)
+
+    //  document.getElementById('squirrel').addEventListener('click',function(e){
+    //     console.log('squirrel clicked');
+    //     e.stopPropagation()
+        
+    // },false)
+
+    // Capturing mode
+
+    // document.getElementById('images').addEventListener('click',function(e){
+    //     console.log('image clicked');
+        
+    // },true)
+
+    //  document.getElementById('squirrel').addEventListener('click',function(e){
+    //     console.log('squirrel clicked');
+        
+    // },true)
+
+    // const google=document.getElementById('google')
+    // google.addEventListener('click',function(e){
+    //     e.preventDefault()
+    //     e.stopPropagation()
+    //     console.log('google clicked');
+        
+    // })
+   
+    document.querySelector('#images').addEventListener('click',function(e){
+       // console.log(e.target.parentNode);
+       console.log(e.target.tagName);
+       if (e.target.tagName === 'IMG') {
+        console.log(e.target.tagName);
+        console.log(e.target.id);
+        
+         let removeIt = e.target.parentNode
+        removeIt.remove()
+
+       }
+       
+       
+    })
+
+    //removeIt.parentNode.removeChild(removeIt)
+</script>
+</html>
