@@ -187,7 +187,7 @@ function newGame(){
 
 ```
 
-## Project 6
+## Project 5
 
 ```javascript
 const randomColor = function () {
@@ -200,7 +200,9 @@ const randomColor = function () {
 };
 let intervalId
 const startChangingColor = function(){
-  intervalId=setInterval(changeColor,1000);
+ if(!intervalId){
+   intervalId=setInterval(changeColor,1000);
+ }
 
   function changeColor(){
     document.body.style.backgroundColor = randomColor();
@@ -210,6 +212,7 @@ const startChangingColor = function(){
 const stopChangingColor = function(){
 
   clearInterval(intervalId)
+  intervalId=null
 }
 
 
@@ -217,5 +220,45 @@ document.querySelector('#start').addEventListener('click',startChangingColor)
 
 document.querySelector('#stop').addEventListener('click',stopChangingColor)
 
+
+```
+
+
+## Project 6
+
+```javascript
+
+const insert = document.querySelector('#insert')
+
+window.addEventListener('keydown',(e)=>{
+  insert.innerHTML = `
+  <div class='color'>
+  
+  <table>
+  
+    <tr>
+
+    <th>Key</th>
+    <th>Keycode</th>
+    <th>Code</th>
+
+    </tr>
+
+
+    <tr>
+
+    <td>${e.key === ' ' ? 'space':e.key}</td>
+    <td>${e.keyCode}</td>
+    <td>${e.code}</td>
+    
+    </tr>
+    
+
+  </table>
+  
+  </div>
+  
+  `
+})
 
 ```
