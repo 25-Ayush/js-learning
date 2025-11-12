@@ -25,6 +25,7 @@ function User(username, loginCount, isLoggedIn){
         console.log(`welcome ${this.username}`);
         
     }
+    
 
    // return this  
 }
@@ -34,5 +35,6 @@ const userTwo = new User('hulk',15,false)
 console.log(userOne.constructor);
 
 console.log(userOne);
+//console.log(userOne.greetings())
 console.log(userTwo);
-
+//console.log(userTwo.greetings())

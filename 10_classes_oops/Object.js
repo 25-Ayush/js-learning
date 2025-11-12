@@ -16,6 +16,7 @@ function createUser(name,price){
 
 createUser.prototype.increment = function(){
    this.price++
+   
 }
 
 createUser.prototype.printMe = function()
@@ -23,6 +24,7 @@ createUser.prototype.printMe = function()
     console.log(`price is ${this.price}`);
     
 }
+
 const vadapav = new createUser('vada-pav',15)
 const samosa = new createUser('samosa',20)
 
