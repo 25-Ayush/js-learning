@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    function outer(){
+        let name = ' thor'
+        console.log(key); 
+        
+         
+        function inner(){
+            console.log(name); // possible
+            let key = '123'
+        }
+        function innerTwo(){
+            console.log(key); // not possible
+
+            
+        }
+        inner()
+        innerTwo()
+    }
+    outer()
+</script>
+</html>
